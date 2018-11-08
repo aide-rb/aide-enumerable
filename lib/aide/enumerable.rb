@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'enumerable/version'
-
 module Aide
   # If you're really feeling the urge to do some recursive enumeration (except
   # really for comparative methods--those will break joyously), then this
@@ -21,7 +19,7 @@ module Aide
         def initialize(obj); super obj.inspect; end
       end
 
-      include Enumerable
+      include ::Enumerable
 
       attr_reader :enum
       private :enum
